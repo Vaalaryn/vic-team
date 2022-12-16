@@ -50,5 +50,8 @@ function openCity(evt, sheetId) {
 
   }
 
-  
-  
+
+let but = new Button();
+document.getElementById('mySidebar').innerHTML = but.draw();
+but.changeValue('Text Custom')
+but.changeColor('red').changeWidth('100px');

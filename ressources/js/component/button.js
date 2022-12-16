@@ -5,9 +5,24 @@ class Button extends Component {
 
     value = 'Press';
 
-    setValue (newValue) {
-      this.value = newValue;
-      return this
+    changeValue (newValue) {
+      document.getElementById(this.id).innerText = newValue;
+      return this;
+    }
+
+    changeColor(color) {
+      document.getElementById(this.id).style.backgroundColor = color;
+      return this;
+    }
+
+    changeWidth(width) {
+      document.getElementById(this.id).style.width = width;
+      return this;
+    }
+
+    changeHeight(height){
+      document.getElementById(this.id).style.height = height;
+      return this;
     }
 
     draw () {
