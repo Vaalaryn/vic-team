@@ -40,7 +40,9 @@ function openCity(evt, sheetId) {
   ]
   document.getElementById('tab-list').innerHTML += "<button class='tablinks active' onclick='openCity(event, "+sheets[0].id+")'>" + sheets[0].title + '</button>'
   document.getElementById('tabs-container').innerHTML += "<div id='div"+sheets[0].id+"' ondrop='drop(event)' style='display: block' ondragover='allowDrop(event)' class='dropzone tabcontent active'>bla</div>"
-  document.getElementById('mySidebar').innerHTML += (new Button).setValue('Un text ici').draw()
+  let button = new Button();
+  document.getElementById('mySidebar').innerHTML += button.draw();
+  button.changeValue('Un text ici');
   function addTab(){
     tabCount++
     let sheet = {title:'Sheet'+ tabCount.toString(), id: tabCount}
@@ -50,12 +52,6 @@ function openCity(evt, sheetId) {
     document.getElementById('tabs-container').innerHTML += "<div id='div"+sheet.id+"' ondrop='drop(event)' ondragover='allowDrop(event)' class='dropzone tabcontent'>test</div>"
 
   }
-
-
-let but = new Button();
-document.getElementById('mySidebar').innerHTML = but.draw();
-but.changeValue('Text Custom')
-but.changeColor('red').changeWidth('100px');
 
   function changeBgCol(event){
     document.getElementById('div'+ tabActive).style.backgroundColor = event
