@@ -40,7 +40,7 @@ function openCity(evt, sheetId) {
 
     document.getElementById('tab-list').innerHTML += "<button class='tablinks' onclick='openCity(event, "+sheet.id+")'>" + sheet.title + '</button>'
     document.getElementById('tabs-container').innerHTML += "<div id=\"snaptarget_" + sheet.id + "\" class=\"ui-widget-header dropzone tabcontent\"></div>"
-
+    $("#snaptarget_" + sheet.id).droppable();
   }
 
   function changeBgCol(event){
