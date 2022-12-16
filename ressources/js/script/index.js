@@ -11,9 +11,10 @@ function allowDrop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
   }
-let tabNumber = 1;
+let tabCount = 1;
 
-function openCity(evt, cityName) {
+
+function openCity(evt, sheetId) {
     // Declare all variables
     var i, tabcontent, tablinks;
   
@@ -28,26 +29,25 @@ function openCity(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById("div"+sheetId).style.display = "block";
     evt.currentTarget.className += " active";
   }
 
   var sheets = [
     {title: "Sheet1", id:1}
   ]
-  document.getElementById('tab-list').innerHTML += "<button class='tablinks' onclick='openCity("+sheets[0].id+")'>" + sheets[0].title + '</button>'
+  document.getElementById('tab-list').innerHTML += "<button class='tablinks active' onclick='openCity(event, "+sheets[0].id+")'>" + sheets[0].title + '</button>'
+  document.getElementById('tabs-container').innerHTML += "<div id='div"+sheets[0].id+"' ondrop='drop(event)' style='display: block' ondragover='allowDrop(event)' class='dropzone tabcontent active'>bla</div>"
 
   function addTab(){
-    tabNumber++
-    sheet = {title:'Sheet'+ tabNumber.toString(), id: tabNumber}
+    tabCount++
+    let sheet = {title:'Sheet'+ tabCount.toString(), id: tabCount}
     sheets.push(sheet)
-    // list(sheets)
-    document.getElementById('tab-list').innerHTML += "<button class='tablinks' onclick='openCity("+sheet.id+")'>" + sheet.title + '</button>'
 
-    // sheets.forEach(sheet => 
-    // );  
+    document.getElementById('tab-list').innerHTML += "<button class='tablinks' onclick='openCity(event, "+sheet.id+")'>" + sheet.title + '</button>'
+    document.getElementById('tabs-container').innerHTML += "<div id='div"+sheet.id+"' ondrop='drop(event)' ondragover='allowDrop(event)' class='dropzone tabcontent'>test</div>"
+
   }
 
   
