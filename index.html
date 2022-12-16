@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ressources/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
+  <style>
+    .draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+    .ui-widget-header p, .ui-widget-content p { margin: 0; }
+    #snaptarget { height: 140px; }
+    </style>
     <div id="mySidebar" class="sidebar">
         <img id="${this.id}" src="ressources/img/carrousel.png" draggable="true" ondragstart="drag(event)">
     </div>
+        <a href="#">bla</a>
+        <a href="#">bla</a>
+        <a href="#">bla</a>
+        <a href="#">bla</a>
+        <img class="draggable" src="ressources/img/pato.png" width="200">
+      </div>
     <h1>Figmalike</h1>
     <input type="color" onchange="changeBgCol(this.value)" id="bg-color" name="head"
     value="">
@@ -20,12 +33,10 @@
         <button class="tablinks" onclick="addTab()">+</button>
       </div>
       
-  <div id="tabs-container">
-    <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="dropzone">bla</div> -->
-</div>
-<img id="drag1" src="ressources/img/pato.png" draggable="true" ondragstart="drag(event)" width="200">
+  <div id="tabs-container"></div>
     <script src="./ressources/js/AbstractComponent.js"></script>
     <script src="./ressources/js/component/button.js"></script>
     <script src="./ressources/js/script/index.js"></script>
+    <script src="./ressources/js/script/draggable.js"></script>
 </body>
 </html>
