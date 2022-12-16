@@ -26,6 +26,6 @@ class Button extends Component {
     }
 
     draw () {
-      return `<button id="${this.id}">${this.value}</button>`;
+      return `<button id="${this.id}" draggable="true" ondragstart="drag(event)">${this.value}</button>`;
     }
 };

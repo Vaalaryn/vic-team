@@ -13,11 +13,12 @@ function allowDrop(ev) {
   }
 let tabCount = 1;
 
+let tabActive = 1;
 
 function openCity(evt, sheetId) {
     // Declare all variables
     var i, tabcontent, tablinks;
-  
+    tabActive = sheetId;
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -39,7 +40,7 @@ function openCity(evt, sheetId) {
   ]
   document.getElementById('tab-list').innerHTML += "<button class='tablinks active' onclick='openCity(event, "+sheets[0].id+")'>" + sheets[0].title + '</button>'
   document.getElementById('tabs-container').innerHTML += "<div id='div"+sheets[0].id+"' ondrop='drop(event)' style='display: block' ondragover='allowDrop(event)' class='dropzone tabcontent active'>bla</div>"
-
+  document.getElementById('mySidebar').innerHTML += (new Button).setValue('Un text ici').draw()
   function addTab(){
     tabCount++
     let sheet = {title:'Sheet'+ tabCount.toString(), id: tabCount}
@@ -55,3 +56,9 @@ let but = new Button();
 document.getElementById('mySidebar').innerHTML = but.draw();
 but.changeValue('Text Custom')
 but.changeColor('red').changeWidth('100px');
+
+  function changeBgCol(event){
+    document.getElementById('div'+ tabActive).style.backgroundColor = event
+
+  }
+  
