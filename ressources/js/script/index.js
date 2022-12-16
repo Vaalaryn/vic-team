@@ -39,7 +39,7 @@ function openCity(evt, sheetId) {
   ]
   document.getElementById('tab-list').innerHTML += "<button class='tablinks active' onclick='openCity(event, "+sheets[0].id+")'>" + sheets[0].title + '</button>'
   document.getElementById('tabs-container').innerHTML += "<div id='div"+sheets[0].id+"' ondrop='drop(event)' style='display: block' ondragover='allowDrop(event)' class='dropzone tabcontent active'>bla</div>"
-
+  document.getElementById('mySidebar').innerHTML += (new Button).setValue('Un text ici').draw()
   function addTab(){
     tabCount++
     let sheet = {title:'Sheet'+ tabCount.toString(), id: tabCount}
