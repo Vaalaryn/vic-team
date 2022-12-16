@@ -40,3 +40,6 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+.dropzone{
+    border: 1px solid black; height:1000px;width:100%;
+}
