@@ -16,7 +16,7 @@
     #snaptarget { height: 140px; }
     </style>
     <div id="mySidebar" class="sidebar">
-        <img id="${this.id}" src="ressources/img/carrousel.png" draggable="true" ondragstart="drag(event)">
+        <img class="draggable"  src="ressources/img/carrousel.png">
     </div>
         <a href="#">bla</a>
         <a href="#">bla</a>
@@ -25,18 +25,19 @@
         <img class="draggable" src="ressources/img/pato.png" width="200">
       </div>
     <h1>Figmalike</h1>
-    <input type="color" onchange="changeBgCol(this.value)" id="bg-color" name="head"
-    value="">
+    <input type="color" onchange="changeBgCol(this.value)" id="bg-color" name="head">
     <label for="bg-color">couleur de fond</label>
 
     <div class="tab" id="tab-list">
-        <button class="tablinks" onclick="addTab()">+</button>
-      </div>
+      <button class="tablinks" onclick="addTab()">+</button>
+    </div>
       
   <div id="tabs-container"></div>
+
     <script src="./ressources/js/AbstractComponent.js"></script>
     <script src="./ressources/js/component/button.js"></script>
     <script src="./ressources/js/script/index.js"></script>
     <script src="./ressources/js/script/draggable.js"></script>
+
 </body>
 </html>

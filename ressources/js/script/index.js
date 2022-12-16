@@ -31,6 +31,7 @@ function openCity(evt, sheetId) {
   let button = new Button();
   document.getElementById('mySidebar').innerHTML += button.draw();
   button.changeValue('Un text ici');
+  button.draggable();
 
   function addTab(){
     tabCount++
@@ -43,7 +44,7 @@ function openCity(evt, sheetId) {
   }
 
   function changeBgCol(event){
-    document.getElementById('div'+ tabActive).style.backgroundColor = event
+    document.getElementById('snaptarget_'+ tabActive).style.backgroundColor = event
 
   }
   
