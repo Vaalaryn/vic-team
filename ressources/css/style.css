@@ -8,6 +8,7 @@
     right: 0;
     background-color: rgb(119, 119, 119); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: scroll;
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
   }
