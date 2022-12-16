@@ -6,12 +6,14 @@ class Component {
       }
     }
 
+    id = (Math.random() + 1).toString(36).substring(7);
+
     setBase(){
 
     }
   
     draw() {
-
+        return 'Wesh'
     }
 
     style() {
