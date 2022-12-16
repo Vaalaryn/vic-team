@@ -13,11 +13,12 @@ function allowDrop(ev) {
   }
 let tabCount = 1;
 
+let tabActive = 1;
 
 function openCity(evt, sheetId) {
     // Declare all variables
     var i, tabcontent, tablinks;
-  
+    tabActive = sheetId;
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -50,5 +51,8 @@ function openCity(evt, sheetId) {
 
   }
 
-  
+  function changeBgCol(event){
+    document.getElementById('div'+ tabActive).style.backgroundColor = event
+
+  }
   
